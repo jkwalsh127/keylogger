@@ -24,4 +24,9 @@ Once in a package and downloaded onto a machine, there are many ways the malicio
 While hackers aren't always able to spread malicious code to a large number of machines with each attack, 
 Attacking packages that are frequently used as dependencies allows malicious code to propogate across networks. 
 
-An interesting note is that much of the "malicious" code that is spread is initiated by individuals or entitities that claim no harm is intended. For example, "penetration tests" are often conducted to discover specific vulnerabilities or even just to examine how far the code can be spread. Here is an interesting story of how an intern at a  ______________
+An interesting note is that much of the "malicious" code that is spread is initiated by individuals or entitities that claim no harm is intended. For example, "penetration tests" are often conducted to discover specific vulnerabilities or even just to examine how far the code can be spread. Sometimes the code can be more functional, but still not too harmful. An example of this is how scripts can be used to take a share of a machines computing power and use it to mine cryptocurrencies. 
+
+#### Credits
+All in all, security is a fascinating topic, and good programmers should have a grasp to better understand how the trafficking software and the exchange of information operates. Thanks to the team at <a href="https://ondecentral.com/">***Decentral***</a> for providing the code challenge and prompting the research.
+
+
