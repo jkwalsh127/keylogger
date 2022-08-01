@@ -11,9 +11,10 @@ While this is a simple design, it shows how a commonly used package can be utili
 ### Discussion
 
 While keyloggers are only considered the tip of the iceberg of threats to individuals whose machines have been targetted, it should be obvious how devastating these tools can be. Since the software is locally present, a hacker can listen directly for the information they desire without having to work around measures like HTTPS encryption when intercepting internet traffic.
-As developers, it is important to realize how easy it is for simple software like a keylogger to make its way onto our devices. In fact, going through the daily habit of installing npm packages is one way that we open ourselves up to attack. We shouldn't make the mistake of overlooking how easy it can for bad actors to compromise an application's package dependency, insert that package into an application's build pipeline, and make it to deployment without any validation.
 
-Common ways hackers access pre-vetted packages:
+As developers, it is important to realize how easy it is for simple software like a keylogger to make its way onto our devices. We shouldn't make the mistake of overlooking how easy it can for bad actors to compromise an application's package dependency, insert that package into an application's build pipeline, and make it to deployment without any validation.
+
+Common ways hackers access pre-vetted npm packages:
 - Impersonating legitmate packages
 - Taking over abondoned packages
 - Attack through network vuleralbilities, like the direct hijacking of a package publisher's npm account
@@ -26,4 +27,8 @@ An interesting note is that much of the "malicious" code out there is actually i
 #### Credits
 All in all, security is a fascinating topic, and good programmers should have a grasp to better understand how the trafficking of software and the exchange of information operates. Thanks to the team at <a href="https://ondecentral.com/">***Decentral***</a> for providing the code challenge and prompting the research.
 
+#### Technologies 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white) Package "EmailJS"
 
