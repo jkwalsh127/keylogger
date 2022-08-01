@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# Keylogger App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+This project was an exercise in demonstrating how easy it can be to code for a malicious keylogging tool. My research along with it was a valuable examination as to the vulnerabilities that developers commonly face when interacting with node modules. 
 
-## Available Scripts
+Only 58 lines of vanilla JavaScript is written to listen for and identify keystrokes. Once the data is retrieved, a bad actor can attempt to decipher usernames, passwords, and any other piece of information that the unwitting user entered while using a corrupted application or machine.
 
-In the project directory, you can run:
+Creating a keylogger is as simple as adding an event listener that tracks key and/or button presses. Logs of everything a user types and clicks can be recorded, stored, and written to files. Anonymous proxy servers can be used to retrieve these files from their target's machine. 
 
-### `npm start`
+I built a react app to demonstrate how a simple keylogger can retrieve data. I add one small JavaScript file and install a single dependency package. The "EmailJS" package is included to use their SMTP server to send emails containing the logged data. I setup a new gmail account that will send itself a message everytime a user types something within the app and then clicks their mouse or hits enter. In practice, the messages would contain every string of characters a user entered before submitting a form or field. 
+While this is a simple design, it shows how a commonly used package can be utilized to enact a very serious invasion of people's property. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Discussion
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+While keyloggers are only considered the tip of the iceberg of threats to individuals whose machines have been targetted, it should be obvious how devastating these tools can be. Since the software is locally present, a hacker can listen directly for the information they desire without having to work around measures like HTTPS encryption when intercepting internet traffic.
+As developers, it is important to realize how easy it is for simple software like a keylogger to make its way onto our devices. In fact, going through the daily habit of installing npm packages is one way that we open ourselves up to attack. We shouldn't make the mistake of overlooking how easy it can for bad actors to compromise an application's package dependency, insert that package into an application's build pipeline, and make it to deployment without any validation.
 
-### `npm test`
+Common ways hackers access pre-vetted packages:
+- Impersonating legitmate packages
+- Taking over abondoned packages
+- Attack through network vuleralbilities, like the direct hijacking of a package publisher's npm account
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once in a package and downloaded onto a machine, there are many ways the malicious script can get up and running; it's as easy as using a "preinstall" directive in the "package.json" file to execute, even before the actual installation process has begun.
+While hackers aren't always able to spread malicious code to a large number of machines with each attack, 
+Attacking packages that are frequently used as dependencies allows malicious code to propogate across networks. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+An interesting note is that much of the "malicious" code that is spread is initiated by individuals or entitities that claim no harm is intended. For example, "penetration tests" are often conducted to discover specific vulnerabilities or even just to examine how far the code can be spread. Here is an interesting story of how an intern at a  ______________
