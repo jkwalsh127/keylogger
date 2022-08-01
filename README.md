@@ -3,7 +3,7 @@
 ## Description
 This project was an exercise in demonstrating how easy it can be to code for a malicious keylogging tool. My research along with it was a valuable examination as to the vulnerabilities that developers commonly face when interacting with node modules. 
 
-Only 58 lines of vanilla JavaScript is written to listen for and identify keystrokes. Once the data is retrieved, a bad actor can attempt to decipher usernames, passwords, and any other piece of information that the unwitting user entered while using a corrupted application or machine.
+In this demo application, only 58 lines of vanilla JavaScript is written to listen for and identify keystrokes. Once the data is retrieved, a bad actor can attempt to decipher usernames, passwords, and any other piece of information that the unwitting user entered while using a corrupted application or machine.
 
 Creating a keylogger is as simple as adding an event listener that tracks key and/or button presses. Logs of everything a user types and clicks can be recorded, stored, and written to files. Anonymous proxy servers can be used to retrieve these files from their target's machine. 
 
