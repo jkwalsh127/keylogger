@@ -1,5 +1,10 @@
 # Keylogger App
 
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white) **Package "EmailJS"**
+
 ## Description
 This project was an exercise in demonstrating how easy it can be to code for a malicious keylogging tool. My research along with it was a valuable examination as to the vulnerabilities that developers commonly face when interacting with node modules. 
 
@@ -26,11 +31,4 @@ An interesting note is that much of the "malicious" code out there is actually i
 
 #### Credits
 All in all, security is a fascinating topic, and good programmers should have a grasp to better understand how the trafficking of software and the exchange of information operates. Thanks to the team at <a href="https://ondecentral.com/">***Decentral***</a> for providing the code challenge and prompting the research.
-
-#### Technologies 
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
-
-![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white) ***Package "EmailJS"***
 
